@@ -1,0 +1,14 @@
+<% include ../partials/header%>
+    <div>
+        <a href="/">Trở lại</a>
+    </div>
+    <div>
+        <%# Form xóa bài nhật ký%>
+        <%# Nhớ thêm method="POST" vào form%>
+        <form method="POST">
+            Bạn muốn xóa bài nhật ký: <strong><%-data.title%></strong> ?
+            <button type="submit" class="btn btn-primary">Xóa</button>
+        </form>
+    </div>
+
+<% include ../partials/footer%>

@@ -1,0 +1,25 @@
+<% include ../partials/header%>
+    <div>
+        <a href="/">Quay lại</a>
+    </div>
+    <h3 class="diary-title">Thêm mới nhật ký</h3>
+    <div class="add-diary">
+        <%# Form tạo bài nhật ký mới%>
+        <%# Nhớ thêm method="POST" vào form%>
+        <form method="POST">
+            <div class="form-group">
+                <label for="title">Tiêu đề</label>
+                <%# Đế ý thuộc tính: name="title" (phải có)%>
+                <input type="text" class="form-control" id="title" name="title" placeholder="Nhập tiêu đề nhật ký">
+            </div>
+            <div class="form-group">
+                <label for="content">Nội dung</label>
+                <%# Đế ý thuộc tính: name="content" (phải có)%>
+                <textarea  class="form-control" id="content" name="content" placeholder="Nhập nội dung nhật ký" rows="5" cols="33"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Thêm mới</button>
+        </form>
+    </div>
+
+<% include ../partials/footer%>

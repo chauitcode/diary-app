@@ -1,0 +1,11 @@
+<% include ../partials/header%>
+    <div>
+        <a href="/">Trở lại</a>
+    </div>
+    <div id="content">
+        <%# Load data truyền từ backend ra frontend%>
+        <h2 class="diary-title"><%-data.title%></h2>
+        <p class="diary-content"><%-data.content%></p>
+    </div>
+
+<% include ../partials/footer%>

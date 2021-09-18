@@ -1,0 +1,41 @@
+<% include partials/header%>
+    <h1>My diary</h1>
+    <ul>
+      <li><a href="/diary/add">Thêm mới</a></li>
+    </ul>
+
+    <div class="content">
+      <% if (result.length > 0) {%>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Tiêu đề</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%
+          var i = 0;
+            if (result) {
+              result.forEach(item => { 
+                i++;
+          %>
+          <tr>
+            <th scope="row"><%-i%></th>
+            <td><a href="/diary/detail/<%-item.id%>"><%-item.title%></a></td>
+            <td>
+              <a href="/diary/update/<%-item.id%>">Chỉnh sửa</a> |
+              <a href="/diary/delete/<%-item.id%>">Xóa</a>
+            </td>
+          </tr>
+          <%})} %>
+         
+        </tbody>
+      </table>
+      <%} else {%>
+        Nội dung trống
+      <%}%>
+    </div>
+
+    <% include partials/footer%>
